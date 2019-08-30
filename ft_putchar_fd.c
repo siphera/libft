@@ -6,24 +6,13 @@
 /*   By: ssalman <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 05:40:37 by ssalman           #+#    #+#             */
-/*   Updated: 2019/07/12 05:40:41 by ssalman          ###   ########.fr       */
+/*   Updated: 2019/08/30 06:32:10 by ssalman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	char endline;
-
-	if (s)
-	{
-		endline = '\n';
-		while (*s != 0)
-		{
-			write(fd, s, 1);
-			s++;
-		}
-		write(fd, &endline, 1);
-	}
+	write(fd, &c, 1);
 }
